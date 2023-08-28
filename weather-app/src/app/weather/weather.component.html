@@ -1,0 +1,47 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+<body>
+    <h1 style="border: 1px solid rgb(196, 195, 138);color: deeppink; margin-left: 300px; margin-right: 300px;"
+        class="alert-dark text-md-center font-monospace px-xl-5">Forecast Weather</h1>
+
+    <div class="container align-items-center">
+
+        <div class="input-group mt-lg-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text">City:</span>
+
+            </div>
+            <form #form="ngForm" (submit)="onEnter()">
+                <input type="text" class="form-control" id="locationinput" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" name="city" [(ngModel)]="cityName" (submit)="ngOnInit">
+            </form>
+
+        </div>
+
+
+
+
+        <br><br>
+
+        <div class="row mt-xxl-5 text-center ">
+            <div class="city fs-1" style="color:greenyellow;">City: {{cityName2}}</div>
+            <div class="temperature fs-1" style="color: yellowgreen;">Temperature: {{temperature}} derece</div>
+            <div class="fs-1" style="color: chartreuse;">Country: {{country}}</div>
+
+        </div>
+
+        <br><br>
+        <div class="d-flex justify-content-center">
+            <a [routerLink]="['/weather2']" routerLinkActive="active" ariaCurrentWhenActive="page"
+                class="btn btn-danger align-self-center p-lg-2" role="button">Forecast Weather
+            </a>
+        </div>
+
+
+    </div>
+
+</body>
+
+<router-outlet></router-outlet>

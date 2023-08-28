@@ -1,0 +1,10 @@
+body{
+    background-image: url(background2.jpg);
+    background-repeat:round;
+    background-position: auto;
+    background-size: auto;
+}
+
+col{
+    height: 200px;
+}
