@@ -71,13 +71,12 @@
                     <p class="text-center" style="font-size: 24px; color: chartreuse;">Country: {{ country }}</p>
                 </div>
                 <div class="text-center mt-3">
-                    <a [routerLink]="['/weather2']" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn btn-forecast" role="button">Forecast Weather</a>
+                    <a [routerLink]="['/weather2']" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn btn-forecast" role="button" (submit)="click()">Forecast Weather</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-
 
 <router-outlet></router-outlet>

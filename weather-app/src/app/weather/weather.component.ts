@@ -15,7 +15,7 @@ export class WeatherComponent implements OnInit {
   country: string="";
   cityName: string="";
   cityName2: string=""
-  constructor(private weatherService: WeatherService){}
+  constructor(private weatherService: WeatherService, private router:Router){}
 
   onEnter() {
     this.weatherService.getweather(this.cityName).subscribe({
@@ -62,6 +62,10 @@ export class WeatherComponent implements OnInit {
     })
 
     
+  }
+
+  click(){
+    this.router.navigate(['/weather2']);
   }
 
 
